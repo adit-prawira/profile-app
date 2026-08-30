@@ -16,7 +16,7 @@ import { WorkExperienceDetails } from "./components/WorkExperienceDetails";
 
 export function WorkExperienceTimeline(): JSX.Element {
   const { handleOpen } = useModal();
-  const workExperienceDictionary = keyBy(workExperiences, "title");
+  const workExperienceDictionary = keyBy(workExperiences, "id");
 
   return (
     <Grid container>
@@ -25,7 +25,7 @@ export function WorkExperienceTimeline(): JSX.Element {
       </Grid>
       <Grid item xs={12}>
         <Timeline position="alternate">
-          {map(workExperiences, ({ title, start, end, image }) => (
+          {map(workExperiences, ({ title, start, end, image, id,}) => (
             <TimelineItem key={uuid()}>
               <TimelineOppositeContent>
                 <Typography>
@@ -43,7 +43,7 @@ export function WorkExperienceTimeline(): JSX.Element {
                   onClick={() => {
                     const workExperience = get(
                       workExperienceDictionary,
-                      title,
+                      id,
                       undefined
                     );
                     if (workExperience) {

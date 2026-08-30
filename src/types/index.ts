@@ -20,6 +20,7 @@ export type Artwork = {
 };
 
 export type WorkExperience = {
+  id: number; 
   title: string;
   companyName: string;
   location: string;
