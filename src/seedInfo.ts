@@ -237,12 +237,51 @@ export const educations: Education[] = [
 export const workExperiences: WorkExperience[] = [
   {
     title: "Senior Software Engineer",
+    companyName: "Redcat Hospitality Technology",
+    location: "Melbourne",
+    start: "January 2026",
+    end: "Present",
+    startYear: "2026",
+    endYear: "Present",
+    logo: "/Images/Redcat+app+icon.png",
+    image: "/Images/Redcat+app+icon.png",
+    descriptions: [
+      "Led technical strategy, planning, and engineering mentorship for the Consumer Ordering team",
+      "Collaborated with Product to break down features into vertical slices for faster, incremental delivery.",
+      "Partnered with engineering and product teams to optimize the user ordering journey across all digital touchpoints (Mobile, Web, Kiosk)",
+      "Built scalable applications using React Native, React, TypeScript, Jitsu, Python (Flask), and AWS.",
+      "Oversaw cross-platform releases across Mobile, Web, and Kiosk applications.",
+      "Led the integration of Redcat Payment services across all digital touchpoints (App, Web, Kiosk).",
+      "Fostered a product-centric mindset among engineering leads to improve feature outcomes.",
+      "Partnered with engineering leadership to optimize CI/CD pipelines and development cycles.",
+      "Fostered a transparent team culture centered on open, low-friction communication, boosting productivity and enabling early alignment on project requirements"
+    ],
+  },
+  {
+    title: "Senior Software Engineer",
+    companyName: "tes",
+    location: "Melbourne",
+    start: "July 2025",
+    end: "January 2026",
+    startYear: "2025",
+    endYear: "2026",
+    logo: "/Images/tesglobal_logo.jpeg",
+    image: "/Images/tesglobal_logo.jpeg",
+    descriptions: [
+      "Improve and automate financial reconciliation for Synergetic payment integration with Stripe, enhancing accuracy and reducing manual labour for schools.",
+      "Enhance SEQTA security to prevent malicious attacks.",
+      "Served as Interim Tech Lead during post-acquisition integration, overseeing technical planning, initiative scoping, and team leadership to ensure smooth product delivery.",
+      "Improved system architecture and CI/CD pipelines to enhance server security, efficiency, and observability across Spring Boot, NodeJS, and NestJS services deployed on AWS. Work with diverse technologies such as .NET, Delphi, Spring Boot, Jetty, and NestJS."
+    ],
+  },
+  {
+    title: "Senior Software Engineer",
     companyName: "Education Horizons",
     location: "Melbourne",
     start: "July 2024",
-    end: "Present",
+    end: "July 2025",
     startYear: "2024",
-    endYear: "Present",
+    endYear: "2025",
     logo: "/Images/educationhorizons.jpg",
     image: "/Images/educationhorizons.jpg",
     descriptions: [
@@ -369,7 +408,7 @@ export const workExperiences: WorkExperience[] = [
       "Develop smart data management and type classification parsing system which increase customer data management 30% faster.",
     ],
   },
-];
+].map((experience, index) => ({...experience, id: index + 1}));
 
 export const artworks: Artwork[] = [
   {
